@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 7th Monthsary, Baby Ko!</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100vh;
+    background: radial-gradient(ellipse at center, #004d00 20%, #001a00 100%);
+    overflow: hidden;
+    position: relative;
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+
+  /* Floating hearts */
+  .heart {
+    position: absolute;
+    color: #00ff99;
+    opacity: 0.5;
+    animation: floatHearts 12s linear infinite;
+  }
+
+  @keyframes floatHearts {
+    0% {
+      transform: translateY(100vh) scale(0.6);
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateY(-10vh) scale(1.2);
+      opacity: 0;
+    }
+  }
+
+  /* Rain effect */
+  .rain {
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background: rgba(0, 255, 0, 0.3);
+    top: -100px;
+    animation: rainFall linear infinite;
+  }
+
+  @keyframes rainFall {
+    0% { transform: translateY(0vh); opacity: 0.7; }
+    100% { transform: translateY(120vh); opacity: 0; }
+  }
+
+  /* Lightning flashes */
+  .lightning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    animation: lightningFlash 10s infinite;
+  }
+
+  @keyframes lightningFlash {
+    0%, 97%, 100% { opacity: 0; }
+    98% { opacity: 0.3; }
+    99% { opacity: 0.6; }
+  }
+
+  /* Container for the letter */
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    max-width: 700px;
+    background: rgba(0, 128, 0, 0.25);
+    border: 2px solid #00ff99;
+    box-shadow: 0 0 20px #00ff99;
+    border-radius: 15px;
+    padding: 25px 30px;
+    text-align: justify;
+    line-height: 1.6;
+    backdrop-filter: blur(4px);
+    z-index: 10;
+  }
+
+  .container h1 {
+    text-align: center;
+    color: #aaffaa;
+    text-shadow: 0 0 10px #00ff99;
+    margin-bottom: 20px;
+  }
+
+  .container p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="lightning"></div>
+<div class="container">
+  <h1>Happy 7th Monthsary, Baby Ko!</h1>
+  <p>Hi baby! It's finally our 7th monthsary pooo! I'm so happy to be with you every single time, kahit sa mga panahong nahihirapan tayo. Happy pa rin ako dahil hindi tayo sumusuko. Maraming salamat sa lahat ng chances na binigay mo sa akin kapag tayo ay nag-aaway. Salamat dahil lagi mo akong pinipili. Mahal na mahal kita, baby ko.</p>
+
+  <p>Para sa'yo, Baby Ko — kung dumating man ang araw na maramdaman mong wala nang nagmamahal sa'yo, gusto kong malaman mo na hindi totoo iyon. Kahit hindi mo maramdaman mula sa ibang tao o sa pamilya mo, ako andito lang. Hindi ako aalis.</p>
+
+  <p>Mahal kita, hindi dahil sa kung ano ang meron ka o kung gaano ka kagaling. Mahal kita dahil ikaw yan. Buo ka sa paningin ko, kahit pakiramdam mo ay basag ka na. Kahit hindi ka laging masaya, kahit pagod ka na, kahit umiiyak ka sa mga gabing walang nakakakita, gusto kong malaman mo na may isang taong totoo ang pagmamahal sa'yo — at ako 'yon.</p>
+
+  <p>Hindi mo kailangang pilitin ang sarili mong maging okay para lang mahalin. Ako mismo ang pipili sa'yo araw-araw. Kapag naguguluhan ka, tutulungan kitang hanapin ang sarili mo. Kapag napagod ka, pahinga ka sa puso ko.</p>
+
+  <p>Kahit hindi mo maramdaman ang pagmamahal ng iba, gusto kong maalala mong may isang taong handang magpuno ng kulang sa'yo. Hindi kita iiwan, lalo na sa mga panahong kailangan mo ng karamay.</p>
+
+  <p>Sa mundong puno ng ingay at sakit, ako ang tahimik mong sandigan. Lagi kitang pipiliin.</p>
+
+  <p>Maraming salamat sa lahat, baby ko. Sana umabot tayo hanggang sa kabilang buhay. Lagi kitang pipiliin sa bawat araw. Maraming salamat sa lahat, at happy 7th monthsary, baby ko!</p>
+</div>
+
+<script>
+  // Floating green hearts
+  const heartCount = 20;
+  for (let i = 0; i < heartCount; i++) {
+    let heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💚";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 25 + 15 + "px";
+    heart.style.animationDuration = 8 + Math.random() * 5 + "s";
+    document.body.appendChild(heart);
+  }
+
+  // Rain drops
+  const rainCount = 40;
+  for (let i = 0; i < rainCount; i++) {
+    let drop = document.createElement("div");
+    drop.classList.add("rain");
+    drop.style.left = Math.random() * 100 + "vw";
+    drop.style.animationDuration = 0.8 + Math.random() * 0.5 + "s";
+    document.body.appendChild(drop);
+  }
+</script>
+</body>
+</html>
